@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
   "name": "Windows Phone QR Beta",
-  "description": "This extension adds a QR Code to each app on windowsphone.com which you can scan on your Windows Phone.",
-    "version" : "0.2",
+  "description": "This extension adds a QR Code to each app on the microsoft.com app store which you can scan on your Windows Phone.",
+    "version" : "0.3",
   "icons": { "128": "WindowsPhoneQR.png" },
   "content_scripts": [
     {
-      "matches": ["*://www.windowsphone.com/*/store/app/*"],
+      "matches": ["*://www.microsoft.com/*/store/*/*"],
       "js": ["jquery.min.js", "qrcode.min.js", "content_script.js"]
     }
   ]

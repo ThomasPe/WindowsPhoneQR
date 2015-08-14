@@ -1,11 +1,11 @@
 // Get App ID
 var url = window.location.pathname;
 var pathArray = url.split( '/' );
-var appid = pathArray[5];
-var uri = 'http://windowsphone.com/s?appId=' + appid;
+var appid = pathArray[pathArray.length - 1];
+var uri = 'https://www.microsoft.com/store/apps/' + appid;
 // Insert QR Code
 var qrcode = '<div id="qrCode"><div>'
-$('#offerRating').after(qrcode);
+$('.ph-brand').first().after(qrcode);
 
 var qrcode = new QRCode("qrCode", {
     text: uri,
